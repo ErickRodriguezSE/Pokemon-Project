@@ -1,9 +1,3 @@
-//
-// Created by Paulo Drefahl on 11/27/2022.
-//
-
-// Demonstrate sprite drawing in SFML
-
 #include "pokemonConfig.h"
 
 
