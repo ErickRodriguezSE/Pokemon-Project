@@ -136,23 +136,23 @@ void renderBattle(int pokemon)
     Pokemon squirtle("squirtle", Water, 50, 6, 5,3);
     Pokemon bulbasuar("bulbasuar", Grass, 50, 5, 3,3);
     Pokemon pikachu("pikachu", Electric, 50, 5, 3,5);
-    Pokemon *party1;
+    std::vector<Pokemon> party1;
 
     if(pokemon == 0)
     {
-        party1 = &charmander;
+        party1.push_back(charmander);
     }
     else if(pokemon == 1)
     {
-        party1 = &bulbasuar;
+        party1.push_back(bulbasuar);
     }
     else if(pokemon ==2)
     {
-        party1 = &squirtle;
+        party1.push_back(squirtle);
     }
 
 
-    Pokemon &opp = pikachu;
+    Pokemon opp = pikachu;
 
     Moves command;
     Moves * moveSetE;
