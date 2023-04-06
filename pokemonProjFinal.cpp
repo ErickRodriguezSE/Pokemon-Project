@@ -1,5 +1,5 @@
 #include "pokemonConfig.h"
-
+#include <filesystem> 
 
 void renderBattle(int pokemon);
 void UpdateHP(int Attack, int &pikachu_hp);
@@ -22,7 +22,9 @@ int main() {
     //Text Config
     sf::Text text;
     sf::Font font;
-    if (!font.loadFromFile("C:/Users/Paulo Drefahl/Desktop/hellosfml/PKMNRBYGSC.ttf")) {
+    //The filepath is passed as an argument and is relative 
+    std::filesystem::path fontPath = std::filesystem::relative("PKMNRBYGSC.ttf");
+    if (!font.loadFromFile(fontPath.string())) {
         std::cout << "font error";
     }
     text.setFont(font);
